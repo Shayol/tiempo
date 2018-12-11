@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>TiempoCircular</title>
+
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/photo.jpg" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/photo.jpg" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/photo.jpg" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/photo.jpg" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/flexslider.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+
+	<script type="text/javascript">
+
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-44468372-19', 'auto');
+		ga('send', 'pageview');
+
+		$(function () {
+
+			(function (a, b, c) { if (c in b && b[c]) { var d, e = a.location, f = /^(a|html)$/i; a.addEventListener("click", function (a) { d = a.target; while (!f.test(d.nodeName)) d = d.parentNode; "href" in d && (chref = d.href).replace(e.href, "").indexOf("#") && (!/^[a-z\+\.\-]+:/i.test(chref) || chref.indexOf(e.protocol + "//" + e.host) === 0) && (a.preventDefault(), e.href = d.href) }, !1) } })(document, window.navigator, "standalone");
+
+			$('.pages').scrollTop(0);
+
+			$('.banners-flexslider').flexslider({
+				"animation": "slide",
+				"slideshowSpeed": 5000,
+				"controlNav": false,
+				"directionNav": false,
+				"useCSS": false,
+				"pauseOnAction": true,
+				"startAt": 0,
+				"start": function (slider) {
+					slider.find('li').click(function (e) {
+
+						if (e.target.getAttribute('data-id') != 'obra-element') {
+
+							e.preventDefault();
+							slider.flexAnimate(slider.getTarget("next"));
+							slider.pause();
+
+						}
+
+					});
+				}
+			});
+
+		});
+
+	</script>
+
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="header">
+			<a href="index.html#banner-1" class='not-mobile-logo'>
+				<div class="logo">
+					<img src="img/logo.png" class="header-link" alt="Logo" data-href="index.php">
+				</div>
+			</a>
+			<a href="javascript:void(0)" class='mobile-logo'>
+				<div class="logo">
+					<img src="img/logo.png" alt="Logo" id="mobile-menu">
+				</div>
+			</a>
+			<div class="menu">
+				<p><a href="concepto.html" class="header-link concept">concept</a><a href="Agenda-Tiempo-Circular.pdf" class="header-link"
+					 target="_blank">agenda</a><a href="sponsors.html" class="header-link">sponsors</a><a href="contact.html" class="header-link contact">contact</a></p>
+			</div>
+			<nav class="mobile-menu-dropdown" id="mobile-menu-dropdown">
+				<ul>
+					<li>
+						<div><a href="concepto.html" class="header-link concept">concept</a></div>
+					</li>
+					<li>
+						<div><a href="Agenda-Tiempo-Circular.pdf" class="header-link">agenda</a></div>
+					</li>
+					<li>
+						<div><a href="sponsors.html" class="header-link">sponsors</a></div>
+					</li>
+					<li>
+						<div><a href="contact.html" class="header-link contact">contact</a></div>
+					</li>
+				</ul>
+			</nav>
+			<div class="header-footer-overlay header-bottom-overlay"></div>
+		</div>
+
+		<div class="slide-panel">
+			<div class="backgrounds">
+				<div class="background sponsors slide-active"></div>
+			</div>
+			<div class="pages">
+
+				<div id="page-1" class="row slide-page">
+					<div class="global-content sponsors-content display-table">
+						<div class="sponsors-description display-table">
+							<div class="table-cell valign-middle">
+								<img src="sponsors.html" alt="Sponsors" id="sponsors">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="header-footer-overlay footer-top-overlay"></div>
+			<div class="copyright">
+				<a href="http://espaciopla.com" target="_blank" class="espaciopla" id="espacioplaTrigger">&copy; ESPACIO <span
+					 class="espacioplaUnderline">PLA</span></a>
+			</div>
+			<a href="http://taxi.design/" target="_blank" id="taxidesignTrigger">
+				<div class="powered">
+					POWERED BY <span class="taxiUnderline">TAXI</span>
+				</div>
+			</a>
+		</footer>
+	</div>
+
+	<script type="text/javascript">
+
+		var linksColorGlobal = '#000',
+			linkBorderColorAnimationInterval = 350,
+			_header = document.getElementsByClassName('header')[0],
+			linksHeaderFooter = $('.header a, .footer a'),
+			logoSVGs = $('.logo-svg'),
+			_pages = $('.slide-page'),
+			_content = $('.global-content'),
+			_mobileMenu = document.getElementById('mobile-menu') || undefined,
+			mobileMenu = $('#mobile-menu'),
+			_mobileMenuDropdown = document.getElementById('mobile-menu-dropdown'),
+			mobileMenuDropdown = $('#mobile-menu-dropdown'),
+			mobileMenuDropdownExists = mobileMenuDropdown.length > 0,
+			mobileMenuDropdownClicked = false;
+
+		var NUA = navigator.userAgent,
+			isIEX = NUA.match(/Trident/i),
+			isFirefox = NUA.match(/Firefox/i),
+			mouseWheelEvt = (/Firefox/i.test(NUA)) ? "DOMMouseScroll" : "mousewheel",
+			dB = document.body,
+			wD = window,
+			wDjQuery = $(wD),
+			htmlBody = $('body'),
+			isWindowsTouch,
+			isTouch,
+			edown = 'mousedown',
+			emove = 'mousemove',
+			eup = 'mouseup',
+			taxidesignTrigger = document.getElementById('taxidesignTrigger'),
+			espacioplaTrigger = document.getElementById('espacioplaTrigger');
+
+		(function (elm, elm2) {
+
+			isWindowsTouch = (function (elm) { return elm.PointerEvent || elm.navigator.msPointerEnabled; })(elm);
+			isTouch = (function (elm) { return 'createTouch' in elm.document && "ontouchstart" in elm; })(elm);
+
+			if (isWindowsTouch) {
+
+				if (elm.PointerEvent) {
+
+					edown = 'pointerdown';
+					emove = 'pointermove';
+					eup = 'pointerup';
+
+				} else {
+
+					edown = 'MSPointerDown';
+					emove = 'MSPointerMove';
+					eup = 'MSPointerUp';
+
+				}
+
+			} else if (isTouch) {
+
+				edown = 'touchstart';
+				emove = 'touchmove';
+				eup = 'touchend';
+
+			}
+
+		})(window, document);
+
+		wDjQuery.load(function () {
+
+			$('#preloader').fadeOut(500);
+
+		});
+
+		$(".header .menu a").mouseenter(function () {
+			$(this).stop().animate({ 'borderBottomColor': linksColorGlobal }, linkBorderColorAnimationInterval);
+		}).mouseleave(function () { $(this).stop().animate({ 'borderBottomColor': 'transparent' }, linkBorderColorAnimationInterval); });
+
+		var espacioplaUnderline = $(".espacioplaUnderline");
+		$(".espaciopla").mouseenter(function () {
+			espacioplaUnderline.stop().animate({ 'borderBottomColor': linksColorGlobal }, linkBorderColorAnimationInterval);
+		}).mouseleave(function () { espacioplaUnderline.stop().animate({ 'borderBottomColor': 'transparent' }, linkBorderColorAnimationInterval); });
+
+		var taxiUnderline = $(".taxiUnderline");
+		$(".powered").mouseenter(function () {
+			taxiUnderline.stop().animate({ 'borderBottomColor': linksColorGlobal }, linkBorderColorAnimationInterval);
+		}).mouseleave(function () { taxiUnderline.stop().animate({ 'borderBottomColor': 'transparent' }, linkBorderColorAnimationInterval); });
+
+		function E(evt) { return evt || window.event; }
+
+		function cords(ev) {
+
+			if (ev.pageX == null && ev.clientX != null) {
+
+				var html = document.documentElement;
+				var body = document.body;
+				ev.pageX = ev.clientX + (html && html.scrollLeft || body && body.scrollLeft || 0) - (html.clientLeft || 0)
+				ev.pageY = ev.clientY + (html && html.scrollTop || body && body.scrollTop || 0) - (html.clientTop || 0)
+
+			}
+
+			return { x: ev.pageX, y: ev.pageY }
+
+		}
+
+		function isUndefined(val) { return typeof val === 'undefined'; }
+
+		function PD(ev) {
+
+			ev.preventDefault ? ev.preventDefault() : ev.returnValue = false;
+
+		}
+
+		function is(elm) {
+
+			return typeof elm !== "undefined" && elm != null;
+
+		}
+
+		function getCSS(elm, prop) {
+
+			if (is(elm)) return wD.getComputedStyle(elm).getPropertyValue(prop);
+
+		}
+
+		function gCEL(elm, cls) {
+
+			return elm.getElementsByClassName(cls);
+
+		}
+
+		function indexClass(pclass, node) {
+
+			var index = 0;
+
+			for (var i = 0; i < pclass.length; i++) {
+
+				if (pclass[i] == node) return index;
+				index++;
+
+			}
+
+			return -1;
+
+		}
+
+		function getKey(ev) { return ev.which || ev.keyCode; }
+
+		function attach(elm, listener, ev, useCapture) {
+
+			elm.addEventListener(listener, ev, isUndefined(useCapture) ? false : useCapture);
+
+		}
+
+		function scroll(elm, clbk) {
+
+			if (typeof clbk == 'function') {
+
+				var scrollTimeout = null;
+
+				attach(elm, 'scroll', function () {
+
+					if (scrollTimeout !== null) { clearTimeout(scrollTimeout); }
+
+					scrollTimeout = setTimeout(function () {
+
+						clbk.call(elm);
+
+					}, 75);
+
+				});
+
+			}
+
+		}
+
+		if (!isUndefined(_mobileMenu)) {
+
+			attach(_mobileMenu, 'click', function () {
+
+				if (!mobileMenuDropdownClicked) {
+
+					mobileMenuDropdownClicked = true;
+
+					_content.css({ 'opacity': 0 });
+
+					if (wDjQuery.width() > wDjQuery.height() && wDjQuery.width() > '467') {
+
+						_header.style.width = '100%';
+
+						mobileMenuDropdown.css({ 'display': 'block' }).stop().animate({ 'width': '80%' }, 500, 'easeInOutQuad')
+
+					} else mobileMenuDropdown.css({ 'display': 'block' }).stop().animate({ 'height': (wDjQuery.height() - _mobileMenuDropdown.offsetTop) + 'px' }, 500, 'easeInOutQuad');
+
+				} else {
+
+					mobileMenuDropdownClicked = false;
+
+					wDjQuery.width() > wDjQuery.height() && wDjQuery.width() > '467' ? mobileMenuDropdown.stop().animate({ 'width': '0px' }, 500, 'easeInOutQuad', function () {
+
+						_header.style.width = 'auto';
+
+						_content.css({ 'opacity': 1 });
+
+						mobileMenuDropdown.css({ 'display': 'none' });
+
+					}) : mobileMenuDropdown.stop().animate({ 'height': '0px' }, 500, 'easeInOutQuad', function () {
+
+						_content.css({ 'opacity': 1 });
+
+						mobileMenuDropdown.css({ 'display': 'none' });
+
+					});
+
+				}
+
+			});
+
+		}
+
+		var wheelCarousel = (function (wd, doc) {
+
+			var gwd = $(window),
+				windowHeight = gwd.height(),
+				self,
+				currentIndex = 0,
+				activeIndex = 1,
+				elmOffsetTop = 0;
+
+			function wheelCarousel() { }
+
+			var WPP = wheelCarousel.prototype;
+
+			WPP.defineGlobalParent = function () { self = this; delete self.defineGlobalParent; return self; };
+
+			WPP.init = function (obj) {
+
+				if (obj.backgrounds.length > 0 && gCEL(document, 'homepage').length > 0) {
+
+					var elm = obj.elm,
+						elmjQuery = $(elm),
+						elmHeight = elm.scrollHeight - windowHeight,
+						slides = elm.getElementsByClassName('slide-page'),
+						slidesjQuery = elmjQuery.find('.slide-page'),
+						slidesLength = slidesjQuery.length - 1,
+						backgrounds = obj.backgrounds,
+						activeBackground = backgrounds[0],
+						activeBackgroundNext = activeBackground.nextElementSibling,
+						pageDotsObraNames = $('.page-dot-obra-name'),
+						pageDots = $('.page-dot'),
+						pageDotActive = $('.page-dot-active'),
+						currentIndexHeight = parseInt(getCSS(elm, 'height')),
+						isMouseWheelPresent = false,
+						currentOpacity = 0,
+						indexs = ["white", "black", "white", "white", "black", "white", "white", "white", "black", "black", "black", "black", "black", "white", "black"],
+						repeatativeIndexes = [];
+
+					$.each(indexs, function (index, item) {
+
+						if (!isUndefined(indexs[index + 1]) && indexs[index] == indexs[index + 1]) repeatativeIndexes.push(index + 1);
+
+					});
+
+					for (var i = 0; i <= slidesLength; i++) {
+
+						backgrounds[i].style.transition = backgrounds[i].style.webkitTransition = 'opacity .45s ease-in-out';
+
+					}
+
+					function runOnScroll() {
+
+						elmOffsetTop = elmjQuery.scrollTop();
+
+						defineActiveSlide(elmOffsetTop);
+
+						defineSlideOpacity(elmOffsetTop);
+
+						setSlidesOpacity();
+
+						setDotsOpacity();
+
+					}
+
+					function defineActiveSlide(scrollPosition) {
+
+						currentIndex = parseInt(scrollPosition / windowHeight);
+
+						activeBackground = backgrounds[currentIndex];
+
+						activeBackgroundNext = activeBackground[currentIndex >= slidesLength ? 'previousElementSibling' : 'nextElementSibling'];
+
+					}
+
+					function defineSlideOpacity(scrollPosition) {
+
+						currentOpacity = ((scrollPosition / elmHeight) * slidesLength) - currentIndex;
+
+					}
+
+					function setSlidesOpacity(scrollPosition) {
+
+						for (var i = 0; i <= slidesLength; i++) {
+
+							backgrounds[i].style.opacity = 0;
+
+						}
+
+						var currentOpacityDefined = Math.abs(currentOpacity);
+
+						activeBackground.style.opacity = 1 - currentOpacityDefined;
+						activeBackgroundNext.style.opacity = currentOpacityDefined;
+
+						var activeIndexElement = _pages.eq(currentIndex),
+							activeNextIndexElement = activeIndexElement[currentIndex >= slidesLength ? 'prev' : 'next']();
+
+						if ($.inArray(currentIndex + 1, repeatativeIndexes) == -1) {
+
+							var currentRGB = parseInt(((currentOpacityDefined * 100).toFixed(2) * 255) / 100);
+							var currentRGBDefined = indexs[currentIndex] == 'white' ? 255 - currentRGB : currentRGB;
+
+							currentRGBDefined = 'rgb(' + [currentRGBDefined, currentRGBDefined, currentRGBDefined].join(',') + ')';
+
+							logoSVGs.css({ 'fill': currentRGBDefined });
+							linksHeaderFooter.css({ 'color': currentRGBDefined });
+
+							activeIndexElement.find('.content .description h4, .content .description > p').css({ 'color': currentRGBDefined });
+
+							activeNextIndexElement.find('.content .description h4, .content .description > p').css({ 'color': currentRGBDefined });
+
+							linksColorGlobal = currentRGBDefined;
+
+
+						} else {
+
+							var currentRGBDefined = indexs[currentIndex];
+
+							logoSVGs.css({ 'fill': currentRGBDefined });
+							linksHeaderFooter.css({ 'color': currentRGBDefined });
+
+							activeIndexElement.find('.content .description h4, .content .description > p').css({ 'color': currentRGBDefined });
+
+							activeNextIndexElement.find('.content .description h4, .content .description > p').css({ 'color': currentRGBDefined });
+
+							linksColorGlobal = currentRGBDefined;
+
+						}
+
+						pageDotsObraNames.css({ 'color': currentRGBDefined });
+						pageDots.css({ 'backgroundColor': currentRGBDefined });
+
+						activeIndex = currentIndex + 1;
+
+					}
+
+					function setDotsOpacity() {
+
+						var pageDotActive_ = document.getElementsByClassName('page-dot-active')[0],
+							pageDot = pageDots.eq(currentIndex);
+
+						if (pageDotActive_.id != pageDot.attr('id')) {
+
+							$(pageDotActive_).removeClass('page-dot-active');
+							pageDot.addClass('page-dot-active');
+
+							pageDotActive = pageDot;
+
+						}
+
+					}
+
+					defineActiveSlide(elmjQuery.scrollTop());
+
+					attach(wd, 'keydown', function (e) {
+
+						var key = e.keyCode;
+
+						if (key == 38 || key == 40) {
+
+							if (windowHeight - htmlBody.scrollTop() > 0) {
+
+								if (key == 40) htmlBody.animate({ 'scrollTop': $('#banner-1').offset().top }, 1000, 'easeInOutExpo', function () {
+
+									activeIndex = 1;
+
+								});
+
+							} else {
+
+								activeIndex = key == 38 ? activeIndex - 1 : activeIndex + 1;
+								activeIndex = activeIndex > slidesLength + 1 ? slidesLength + 1 : (activeIndex < 0 ? 0 : activeIndex);
+
+								if (activeIndex == 0) {
+
+									if (key == 38) htmlBody.animate({ 'scrollTop': 0 }, 1000, 'easeInOutExpo');
+
+								} else {
+
+									var currentScroll = elm.scrollTop + windowHeight,
+										nextIndexHeight = windowHeight * activeIndex,
+										dif = nextIndexHeight - currentScroll;
+
+									elmjQuery.stop().animate({ scrollTop: "+=" + dif + "px" }, 500);
+
+								}
+
+							}
+
+							e.preventDefault();
+
+						}
+
+					});
+
+					attach(wd, 'resize', function () {
+
+						windowHeight = gwd.height();
+
+						elmHeight = elm.scrollHeight - windowHeight;
+
+						currentIndexHeight = parseInt(getCSS(elm, 'height'));
+						if (mobileMenuDropdownExists) mobileMenuDropdown.css({ 'height': (gwd.height() - _mobileMenuDropdown.offsetTop) + 'px' });
+
+					});
+
+					scroll(elm, function () {
+
+						runOnScroll();
+
+					});
+
+					runOnScroll();
+
+					$('.page-scroll').on(edown, function (e) {
+
+						htmlBody.animate({ 'scrollTop': $(this.getAttribute('href')).offset().top }, 1000, 'easeInOutExpo');
+
+						e.preventDefault();
+
+					});
+
+					$('.page-scroll-logo').on('click', function (e) {
+
+						if (activeIndex == 0 || activeIndex == 1) {
+
+							htmlBody.animate({ 'scrollTop': 0 }, 1000, 'easeInOutExpo');
+
+							e.preventDefault();
+
+						}
+
+					});
+
+					$('.page-dot-wrapper').on(edown, function (e) {
+
+						var pageDotHref = this.getAttribute('href'),
+							pageDot = $(this).find('.page-dot');
+
+						pageDotActive.removeClass('page-dot-active');
+						pageDot.addClass('page-dot-active');
+
+						pageDotActive = pageDot;
+
+						activeIndex = pageDotHref.replace(/[^\d]+/, '');
+
+						var currentScroll = elm.scrollTop + windowHeight,
+							nextIndexHeight = windowHeight * activeIndex,
+							dif = nextIndexHeight - currentScroll;
+
+						elmjQuery.stop().animate({ scrollTop: "+=" + dif + "px" }, 1000);
+
+						e.preventDefault();
+
+					});
+
+				}
+
+			}
+
+			return new wheelCarousel().defineGlobalParent();
+
+		})(window || this, document, undefined);
+
+		if (document.getElementsByClassName('container-obras').length > 0) wheelCarousel.init({ 'elm': gCEL(document, 'pages')[0], 'backgrounds': gCEL(document, 'background') });
+
+	</script>
+	<script type="text/javascript">
+
+		document.getElementById('sponsors').src = wDjQuery.width() <= 479 ? 'img/sponsors_mobile_portrait.png' : 'img/sponsors.png';
+
+		window.addEventListener('resize', function () {
+
+			document.getElementById('sponsors').src = wDjQuery.width() <= 479 ? 'img/sponsors_mobile_portrait.png' : 'img/sponsors.png';
+
+		}, false);
+
+	</script>
+	<script src="js/translation.js"></script>
+</body>
+
+</html>

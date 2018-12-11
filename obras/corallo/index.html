@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Guido Corallo</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="assets/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="assets/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-touch-icon-152x152.png">
+
+<!-- 
+<link rel="shortcut icon" href="faviconn.ico">
+<meta name="description" content="" />
+ -->
+
+<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+</head>
+<body>
+
+	<section class="iframe-wrapper-outer" id="iframe-wrapper-outer">
+
+		<iframe src="https://player.vimeo.com/video/139969363?color=ff9933&portrait=0&autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="iframe-player"></iframe>
+
+	</section>
+
+<script src="assets/js/jquery.1.11.1.js"></script>
+
+<script type="text/javascript">
+
+	window.addEventListener('load',function(){
+
+		var isWindowsTouch,
+	        isTouch,
+	        edown = 'mousedown',
+	        emove = 'mousemove',
+	        eup = 'mouseup'; 
+
+	    (function(elm,elm2){
+
+	      isWindowsTouch = (function(elm){ return elm.PointerEvent || elm.navigator.msPointerEnabled; })(elm);
+	      isTouch = (function(elm){ return 'createTouch' in elm.document && "ontouchstart" in elm; })(elm);
+
+	        if(isWindowsTouch){
+
+	          if(elm.PointerEvent) {
+	            
+	            edown = 'pointerdown';
+	            emove = 'pointermove';
+	            eup = 'pointerup';
+	            
+	            }else{
+
+	              edown = 'MSPointerDown';
+	                emove = 'MSPointerMove';
+	                eup = 'MSPointerUp';
+	            
+	              }
+
+	          }else if(isTouch){
+
+	            edown = 'touchstart';
+	            emove = 'touchmove';
+	            eup = 'touchend';
+
+	          }
+
+	      })(window,document);
+
+		if(edown != 'mousedown'){
+
+		  document.addEventListener(emove,function(event){
+
+		    event.preventDefault();
+
+		    },false);
+
+		  }
+
+
+
+		},false);
+	
+
+</script>
+
+<script>
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', '', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

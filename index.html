@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>TiempoCircular</title>
+
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/photo.jpg" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/photo.jpg" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/photo.jpg" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/photo.jpg" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/flexslider.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+
+	<script type="text/javascript">
+
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-44468372-19', 'auto');
+		ga('send', 'pageview');
+
+		$(function () {
+
+			(function (a, b, c) { if (c in b && b[c]) { var d, e = a.location, f = /^(a|html)$/i; a.addEventListener("click", function (a) { d = a.target; while (!f.test(d.nodeName)) d = d.parentNode; "href" in d && (chref = d.href).replace(e.href, "").indexOf("#") && (!/^[a-z\+\.\-]+:/i.test(chref) || chref.indexOf(e.protocol + "//" + e.host) === 0) && (a.preventDefault(), e.href = d.href) }, !1) } })(document, window.navigator, "standalone");
+
+			$('.pages').scrollTop(0);
+
+			$('.banners-flexslider').flexslider({
+				"animation": "slide",
+				"slideshowSpeed": 5000,
+				"controlNav": false,
+				"directionNav": false,
+				"useCSS": false,
+				"pauseOnAction": true,
+				"startAt": 0,
+				"start": function (slider) {
+					slider.find('li').click(function (e) {
+
+						if (e.target.getAttribute('data-id') != 'obra-element') {
+
+							e.preventDefault();
+							slider.flexAnimate(slider.getTarget("next"));
+							slider.pause();
+
+						}
+
+					});
+				}
+			});
+
+		});
+
+	</script>
+
+</head>
+
+<body class="index">
+
+	<div class="container container-homepage">
+		<div class="banners-wrapper">
+			<div class="banners banners-slidesow-wrapper banners-flexslider">
+				<ul class="slides">
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/monteintro.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">MDLI PICK YOUR FANTASY</h3><br>
+									<h4 class="obra_title" data-id="obra-element">AZUL DE MONTE</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/tedesco.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">LUNA</h3><br>
+									<h4 class="obra_title" data-id="obra-element">SEBASTIAN TEDESCO</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/viadana.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">THE OTHERNESS</h3><br>
+									<h4 class="obra_title" data-id="obra-element">FLORENCIA VIADANA</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/amaral.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">SINTETIZAR EL PANTANO</h3><br>
+									<h4 class="obra_title" data-id="obra-element">MATEO AMARAL</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/guerra.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">TARDE CIRCULAR</h3><br>
+									<h4 class="obra_title" data-id="obra-element">IGNACIO GUERRA</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/plano.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">HIPERNARRATIVAS</h3><br>
+									<h4 class="obra_title" data-id="obra-element">JAVIER PLANO</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/fernandez.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">RECONSTRUCCION DEL FUTURO</h3><br>
+									<h4 class="obra_title" data-id="obra-element">MANUEL ANTONIO FERNANDEZ</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/rud.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">PIEZA</h3><br>
+									<h4 class="obra_title" data-id="obra-element">GABRIEL RUD</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/corallo.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">VERSUS/TIEMPO GRAFICO</h3><br>
+									<h4 class="obra_title" data-id="obra-element">GUIDO CORALLO</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/giraud.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">LEVAR</h3><br>
+									<h4 class="obra_title" data-id="obra-element">MARIANO GIRAUD</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/rawski.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">OJO, MI CIELO</h3><br>
+									<h4 class="obra_title" data-id="obra-element">TOMAS RAWSKI</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/odriozola.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">SUBASTA</h3><br>
+									<h4 class="obra_title" data-id="obra-element">JUANE ODRIOZOLA</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/bellman.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">RELOJ</h3><br>
+									<h4 class="obra_title" data-id="obra-element">MAXIMILIANO BELLMANN</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/bilatz.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">PERDIDOS</h3><br>
+									<h4 class="obra_title" data-id="obra-element">JAVIER BILATZ</h4>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slide-wrapper" style="background-image: url(img/pla.gif);">
+							<div class="obra-wrapper"><a href="" onclick="return false;" target="_blank" data-id="obra-element">
+									<h3 class="obra_title" data-id="obra-element">JARDINES FRACTALES</h3><br>
+									<h4 class="obra_title" data-id="obra-element">EDUARDO PLA X TAXI</h4>
+							</div>
+						</div>
+					</li>
+				</ul><a href="index.html#banner-1" class="page-scroll button-wrapper"></a>
+			</div>
+		</div>
+	</div>
+	<div class="container container-obras" id="banner-1">
+
+		<div class="header header-custom">
+			<a href="index.html" class='not-mobile-logo page-scroll-logo'>
+				<div class="logo">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+					 y="0px" viewBox="0 0 3840.332 1920.166" enable-background="new 0 0 3840.332 1920.166" xml:space="preserve"
+					 data-href="index.php">
+						<g>
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M1881.266,954.943c-69.538-157.24-137.939-311.91-206.34-466.578
+								c-0.841,0.014-1.683,0.028-2.527,0.042c-25.612,143.982-51.227,287.964-76.952,432.564c-37.395,0-74.416,0-112.892,0
+								c50.5-258.24,100.893-515.927,151.288-773.617c0.813-0.07,1.629-0.141,2.445-0.211c81.898,185.404,163.795,370.811,246.875,558.895
+								c85.808-187.608,170.663-373.129,255.517-558.651c0.855,0.017,1.709,0.035,2.562,0.054
+								c45.3,257.668,90.599,515.337,136.016,773.673c-37.384,0-74.069,0-111.994,0c-23.022-144.026-46.05-288.069-69.074-432.112
+								c-0.842-0.049-1.683-0.099-2.524-0.148C2023.216,643.445,1952.766,798.039,1881.266,954.943z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M2911.648,558.803c-3.783-202.259,173.497-373.251,376.81-375.103
+								c202.355-1.842,379.036,170.358,380.399,374.468c1.362,203.75-170.494,376.812-380.908,376.926
+								C3106.757,935.195,2909.846,791.886,2911.648,558.803z M3557.827,544.481c0.181-23.686-5.181-61.383-21.658-96.18
+								c-48.482-102.381-128.406-159.039-243.208-160.856c-98.756-1.563-174.791,42.001-229.293,123.032
+								c-62.938,93.578-58.247,250.336,34.904,340.841c78.604,76.373,170.909,100.419,274.686,67.7
+								C3487.392,783.033,3558.376,679.789,3557.827,544.481z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M963.587,198.582c132.255,0,264.473,0,397.696,0c0,33.483,0,66.814,0,101.535
+								c-95.891,0-191.642,0-288.224,0c0,58.667,0,115.956,0,174.182c93.454,0,186.147,0,279.755,0c0,34.262,0,67.602,0,102.412
+								c-92.94,0-185.887,0-279.708,0c0,81.18,0,160.905,0,241.945c96.03,0,191.806,0,288.376,0c0,34.712,0,68.12,0,102.279
+								c-132.541,0-264.756,0-397.895,0C963.587,680.529,963.587,439.977,963.587,198.582z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M2538.941,627.823c0,98.34,0,195.298,0,293.053c-36.962,0-72.672,0-109.066,0
+								c0-240.755,0-481.204,0-722.135c2.817-0.373,5.136-0.979,7.441-0.938c67.131,1.238,134.358,0.725,201.367,4.304
+								c80.592,4.303,142.766,41.938,176.373,116.49c50.481,111.985,14.176,270.804-158.184,302.41
+								c-32.347,5.93-65.996,4.782-99.054,6.767C2551.96,628.125,2546.062,627.823,2538.941,627.823z M2539.499,528.758
+								c34.687-2.878,68.425-3.106,101.146-8.992c51.056-9.188,79.535-39.345,87.474-86.056c9.242-54.387-11.619-98.207-57.307-118.419
+								c-41.81-18.496-86.26-16.83-131.313-16.67C2539.499,374.772,2539.499,449.689,2539.499,528.758z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M309.997,300.41c-56.639,0-111.254,0-166.535,0c0-34.292,0-67.365,0-101.556
+								c146.583,0,293.038,0,440.181,0c0,33.504,0,66.591,0,101.146c-54.632,0-109.192,0-164.983,0c0,207.667,0,413.881,0,620.885
+								c-36.639,0-72.046,0-108.663,0C309.997,714.859,309.997,508.67,309.997,300.41z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M917.749,1148.752c51.265,1.566,101.948,2.263,152.523,4.993
+								c28.01,1.515,55.291,8.668,80.47,21.749c57.521,29.886,86.621,89.778,79.395,156.755c-7.697,71.333-46.703,117.931-116.037,138.33
+								c-1.782,0.525-3.528,1.168-6.76,2.246c57.626,79.375,114.591,157.844,173.165,238.522c-16.323,0-30.443,0-44.561,0
+								c-16.401,0-32.815-0.398-49.195,0.181c-7.302,0.261-11.453-2.313-15.541-8.208c-49.213-70.959-98.826-141.639-147.962-212.648
+								c-5.633-8.141-11.417-11.413-21.569-7.436c0,75.373,0,150.851,0,227.219c-28.284,0-55.668,0-83.927,0
+								C917.749,1524.559,917.749,1338.369,917.749,1148.752z M1001.831,1409.564c24.091-1.92,46.875-2.258,69.14-5.825
+								c44.275-7.091,75.876-31.955,77.245-83.876c0.745-28.252-6.526-53.384-31.442-69.641c-35.204-22.974-75.056-19.947-114.943-20.185
+								C1001.831,1289.856,1001.831,1348.049,1001.831,1409.564z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M3507.525,1472.79c57.877,79.728,114.808,158.153,173.16,238.539
+								c-34.672,0-66.898,0.263-99.107-0.375c-3.504-0.07-7.746-4.756-10.229-8.293c-49.357-70.372-98.615-140.811-147.535-211.485
+								c-5.497-7.939-11.02-12.2-21.949-7.99c0,75.229,0,150.997,0,227.457c-28.706,0-56.076,0-84.113,0c0-186.499,0-372.693,0-558.729
+								c0.947-0.581,1.611-1.35,2.27-1.345c61.883,0.438,123.988-4.414,185.304,8.743c75.362,16.168,123.158,72.292,125.882,148.376
+								c2.829,79.013-40.933,140.661-115.185,162.284C3513.737,1470.638,3511.499,1471.468,3507.525,1472.79z M3402.062,1409.553
+								c24.016-1.911,46.792-2.253,69.055-5.804c44.268-7.061,75.916-31.948,77.306-83.825c0.755-28.266-6.492-53.391-31.39-69.671
+								c-35.192-23.013-75.061-19.938-114.971-20.247C3402.062,1289.818,3402.062,1348.012,3402.062,1409.553z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M3246.018,1711.341c-30.136,0-58.12,0.323-86.079-0.4
+								c-3.571-0.092-8.564-4.941-10.259-8.76c-17.315-39.046-34.297-78.246-50.819-117.634c-3.142-7.493-7.054-9.87-15.089-9.833
+								c-72.777,0.329-145.559,0.368-218.336-0.042c-8.683-0.047-12.55,3.085-15.883,10.52c-17.486,38.978-35.663,77.644-53.041,116.668
+								c-3.294,7.4-7.194,9.863-15.213,9.695c-25.957-0.551-51.93-0.207-80.479-0.207c92.483-198.77,184.298-396.106,277.446-596.309
+								C3067.895,1314.646,3156.523,1512.027,3246.018,1711.341z M2976.876,1304.766c-29.543,64.651-57.982,126.893-86.904,190.184
+								c57.132,0,112.56,0,169.744,0C3032.264,1431.923,3005.217,1369.832,2976.876,1304.766z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M2217.391,1150.806c29.019,0,56.044,0,83.766,0
+								c0.237,4.058,0.619,7.54,0.621,11.026c0.029,116.387,0.129,232.775-0.016,349.162c-0.099,79.441-31.93,142.439-101.351,182.446
+								c-120.605,69.5-285.568,7.622-310.702-142.175c-2.236-13.338-2.982-27.062-3.008-40.607
+								c-0.229-116.787-0.138-233.574-0.119-350.361c0-2.773,0.25-5.549,0.426-9.212c27.565,0,54.903,0,84.007,0c0,4.774,0,9.399,0,14.026
+								c0,105.588-0.385,211.181,0.3,316.764c0.152,23.449,2.063,47.277,6.686,70.22c9.854,48.923,42.987,80.096,92.544,87.92
+								c47.294,7.468,88.997-3.446,120.205-42.564c16.398-20.556,21.672-45.168,24.313-70.386c1.664-15.874,2.201-31.928,2.231-47.901
+								c0.186-104.388,0.094-208.776,0.096-313.166C2217.391,1161.26,2217.391,1156.521,2217.391,1150.806z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M1780.464,1280.872c-59.693-48.524-123.852-72.757-198.783-56.31
+								c-47.749,10.48-84.912,37.581-114.835,75.436c-60.195,76.146-58.798,201.421,11.963,278.361
+								c57.823,62.876,195.584,103.561,300.622,1.641c0.41,3.748,0.991,6.643,0.998,9.537c0.073,26.792-0.286,53.59,0.244,80.37
+								c0.157,8.009-2.658,11.872-9.61,15.568c-145.658,77.435-317.212,28.748-398.631-114.063
+								c-30.957-54.298-40.44-113.67-31.995-174.943c14.35-104.081,69.417-182.088,163.353-227.706
+								c89.968-43.693,181.708-39.974,270.27,8.687c3.045,1.674,6.076,6.557,6.129,9.992
+								C1780.666,1217.411,1780.464,1247.393,1780.464,1280.872z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M592.312,1280.717c-60.699-48.935-125.804-73.436-202.033-55.254
+								c-47.639,11.363-84.81,38.601-113.419,77.402c-62.077,84.194-54.439,199.854,15.643,276.867
+								c57.686,63.393,192.613,101.048,298.576,0.413c0.505,3.146,1.23,5.583,1.237,8.023c0.081,27.588-0.17,55.184,0.209,82.77
+								c0.095,6.936-2.172,10.61-8.322,13.958c-144.324,78.571-322.624,29.769-399.787-114.688
+								c-56.476-105.727-46.92-211.534,22.438-309.756c41.834-59.243,98.678-98.38,170.465-113.595
+								c72.71-15.411,142.204-6.835,207.489,29.827c3.066,1.723,7.135,5.375,7.181,8.185
+								C592.503,1215.881,592.312,1246.903,592.312,1280.717z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M680.343,198.465c36.241,0,71.637,0,107.839,0c0,241.165,0,481.605,0,722.631
+								c-36.036,0-71.487,0-107.839,0C680.343,680.548,680.343,440.059,680.343,198.465z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M2520.487,1632.035c56.069,0,109.95,0,164.583,0c0,26.487,0,52.222,0,78.638
+								c-82.728,0-165.218,0-248.285,0c0-186.635,0-372.749,0-559.68c27.648,0,54.977,0,83.702,0
+								C2520.487,1311.064,2520.487,1470.729,2520.487,1632.035z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M699.328,1150.78c27.567,0,54.598,0,82.608,0c0,186.478,0,372.632,0,559.68
+								c-26.97,0-54.352,0-82.608,0C699.328,1524.565,699.328,1338.39,699.328,1150.78z" />
+						</g>
+					</svg>
+				</div>
+			</a>
+			<a href="javascript:void(0)" class='mobile-logo page-scroll-logo'>
+				<div class="logo">
+					<svg version="1.1" id="mobile-menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					 x="0px" y="0px" viewBox="0 0 3840.332 1920.166" enable-background="new 0 0 3840.332 1920.166" xml:space="preserve"
+					 data-href="index.php">
+						<g>
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M1881.266,954.943c-69.538-157.24-137.939-311.91-206.34-466.578
+								c-0.841,0.014-1.683,0.028-2.527,0.042c-25.612,143.982-51.227,287.964-76.952,432.564c-37.395,0-74.416,0-112.892,0
+								c50.5-258.24,100.893-515.927,151.288-773.617c0.813-0.07,1.629-0.141,2.445-0.211c81.898,185.404,163.795,370.811,246.875,558.895
+								c85.808-187.608,170.663-373.129,255.517-558.651c0.855,0.017,1.709,0.035,2.562,0.054
+								c45.3,257.668,90.599,515.337,136.016,773.673c-37.384,0-74.069,0-111.994,0c-23.022-144.026-46.05-288.069-69.074-432.112
+								c-0.842-0.049-1.683-0.099-2.524-0.148C2023.216,643.445,1952.766,798.039,1881.266,954.943z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M2911.648,558.803c-3.783-202.259,173.497-373.251,376.81-375.103
+								c202.355-1.842,379.036,170.358,380.399,374.468c1.362,203.75-170.494,376.812-380.908,376.926
+								C3106.757,935.195,2909.846,791.886,2911.648,558.803z M3557.827,544.481c0.181-23.686-5.181-61.383-21.658-96.18
+								c-48.482-102.381-128.406-159.039-243.208-160.856c-98.756-1.563-174.791,42.001-229.293,123.032
+								c-62.938,93.578-58.247,250.336,34.904,340.841c78.604,76.373,170.909,100.419,274.686,67.7
+								C3487.392,783.033,3558.376,679.789,3557.827,544.481z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M963.587,198.582c132.255,0,264.473,0,397.696,0c0,33.483,0,66.814,0,101.535
+								c-95.891,0-191.642,0-288.224,0c0,58.667,0,115.956,0,174.182c93.454,0,186.147,0,279.755,0c0,34.262,0,67.602,0,102.412
+								c-92.94,0-185.887,0-279.708,0c0,81.18,0,160.905,0,241.945c96.03,0,191.806,0,288.376,0c0,34.712,0,68.12,0,102.279
+								c-132.541,0-264.756,0-397.895,0C963.587,680.529,963.587,439.977,963.587,198.582z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M2538.941,627.823c0,98.34,0,195.298,0,293.053c-36.962,0-72.672,0-109.066,0
+								c0-240.755,0-481.204,0-722.135c2.817-0.373,5.136-0.979,7.441-0.938c67.131,1.238,134.358,0.725,201.367,4.304
+								c80.592,4.303,142.766,41.938,176.373,116.49c50.481,111.985,14.176,270.804-158.184,302.41
+								c-32.347,5.93-65.996,4.782-99.054,6.767C2551.96,628.125,2546.062,627.823,2538.941,627.823z M2539.499,528.758
+								c34.687-2.878,68.425-3.106,101.146-8.992c51.056-9.188,79.535-39.345,87.474-86.056c9.242-54.387-11.619-98.207-57.307-118.419
+								c-41.81-18.496-86.26-16.83-131.313-16.67C2539.499,374.772,2539.499,449.689,2539.499,528.758z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M309.997,300.41c-56.639,0-111.254,0-166.535,0c0-34.292,0-67.365,0-101.556
+								c146.583,0,293.038,0,440.181,0c0,33.504,0,66.591,0,101.146c-54.632,0-109.192,0-164.983,0c0,207.667,0,413.881,0,620.885
+								c-36.639,0-72.046,0-108.663,0C309.997,714.859,309.997,508.67,309.997,300.41z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M917.749,1148.752c51.265,1.566,101.948,2.263,152.523,4.993
+								c28.01,1.515,55.291,8.668,80.47,21.749c57.521,29.886,86.621,89.778,79.395,156.755c-7.697,71.333-46.703,117.931-116.037,138.33
+								c-1.782,0.525-3.528,1.168-6.76,2.246c57.626,79.375,114.591,157.844,173.165,238.522c-16.323,0-30.443,0-44.561,0
+								c-16.401,0-32.815-0.398-49.195,0.181c-7.302,0.261-11.453-2.313-15.541-8.208c-49.213-70.959-98.826-141.639-147.962-212.648
+								c-5.633-8.141-11.417-11.413-21.569-7.436c0,75.373,0,150.851,0,227.219c-28.284,0-55.668,0-83.927,0
+								C917.749,1524.559,917.749,1338.369,917.749,1148.752z M1001.831,1409.564c24.091-1.92,46.875-2.258,69.14-5.825
+								c44.275-7.091,75.876-31.955,77.245-83.876c0.745-28.252-6.526-53.384-31.442-69.641c-35.204-22.974-75.056-19.947-114.943-20.185
+								C1001.831,1289.856,1001.831,1348.049,1001.831,1409.564z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M3507.525,1472.79c57.877,79.728,114.808,158.153,173.16,238.539
+								c-34.672,0-66.898,0.263-99.107-0.375c-3.504-0.07-7.746-4.756-10.229-8.293c-49.357-70.372-98.615-140.811-147.535-211.485
+								c-5.497-7.939-11.02-12.2-21.949-7.99c0,75.229,0,150.997,0,227.457c-28.706,0-56.076,0-84.113,0c0-186.499,0-372.693,0-558.729
+								c0.947-0.581,1.611-1.35,2.27-1.345c61.883,0.438,123.988-4.414,185.304,8.743c75.362,16.168,123.158,72.292,125.882,148.376
+								c2.829,79.013-40.933,140.661-115.185,162.284C3513.737,1470.638,3511.499,1471.468,3507.525,1472.79z M3402.062,1409.553
+								c24.016-1.911,46.792-2.253,69.055-5.804c44.268-7.061,75.916-31.948,77.306-83.825c0.755-28.266-6.492-53.391-31.39-69.671
+								c-35.192-23.013-75.061-19.938-114.971-20.247C3402.062,1289.818,3402.062,1348.012,3402.062,1409.553z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M3246.018,1711.341c-30.136,0-58.12,0.323-86.079-0.4
+								c-3.571-0.092-8.564-4.941-10.259-8.76c-17.315-39.046-34.297-78.246-50.819-117.634c-3.142-7.493-7.054-9.87-15.089-9.833
+								c-72.777,0.329-145.559,0.368-218.336-0.042c-8.683-0.047-12.55,3.085-15.883,10.52c-17.486,38.978-35.663,77.644-53.041,116.668
+								c-3.294,7.4-7.194,9.863-15.213,9.695c-25.957-0.551-51.93-0.207-80.479-0.207c92.483-198.77,184.298-396.106,277.446-596.309
+								C3067.895,1314.646,3156.523,1512.027,3246.018,1711.341z M2976.876,1304.766c-29.543,64.651-57.982,126.893-86.904,190.184
+								c57.132,0,112.56,0,169.744,0C3032.264,1431.923,3005.217,1369.832,2976.876,1304.766z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M2217.391,1150.806c29.019,0,56.044,0,83.766,0
+								c0.237,4.058,0.619,7.54,0.621,11.026c0.029,116.387,0.129,232.775-0.016,349.162c-0.099,79.441-31.93,142.439-101.351,182.446
+								c-120.605,69.5-285.568,7.622-310.702-142.175c-2.236-13.338-2.982-27.062-3.008-40.607
+								c-0.229-116.787-0.138-233.574-0.119-350.361c0-2.773,0.25-5.549,0.426-9.212c27.565,0,54.903,0,84.007,0c0,4.774,0,9.399,0,14.026
+								c0,105.588-0.385,211.181,0.3,316.764c0.152,23.449,2.063,47.277,6.686,70.22c9.854,48.923,42.987,80.096,92.544,87.92
+								c47.294,7.468,88.997-3.446,120.205-42.564c16.398-20.556,21.672-45.168,24.313-70.386c1.664-15.874,2.201-31.928,2.231-47.901
+								c0.186-104.388,0.094-208.776,0.096-313.166C2217.391,1161.26,2217.391,1156.521,2217.391,1150.806z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M1780.464,1280.872c-59.693-48.524-123.852-72.757-198.783-56.31
+								c-47.749,10.48-84.912,37.581-114.835,75.436c-60.195,76.146-58.798,201.421,11.963,278.361
+								c57.823,62.876,195.584,103.561,300.622,1.641c0.41,3.748,0.991,6.643,0.998,9.537c0.073,26.792-0.286,53.59,0.244,80.37
+								c0.157,8.009-2.658,11.872-9.61,15.568c-145.658,77.435-317.212,28.748-398.631-114.063
+								c-30.957-54.298-40.44-113.67-31.995-174.943c14.35-104.081,69.417-182.088,163.353-227.706
+								c89.968-43.693,181.708-39.974,270.27,8.687c3.045,1.674,6.076,6.557,6.129,9.992
+								C1780.666,1217.411,1780.464,1247.393,1780.464,1280.872z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M592.312,1280.717c-60.699-48.935-125.804-73.436-202.033-55.254
+								c-47.639,11.363-84.81,38.601-113.419,77.402c-62.077,84.194-54.439,199.854,15.643,276.867
+								c57.686,63.393,192.613,101.048,298.576,0.413c0.505,3.146,1.23,5.583,1.237,8.023c0.081,27.588-0.17,55.184,0.209,82.77
+								c0.095,6.936-2.172,10.61-8.322,13.958c-144.324,78.571-322.624,29.769-399.787-114.688
+								c-56.476-105.727-46.92-211.534,22.438-309.756c41.834-59.243,98.678-98.38,170.465-113.595
+								c72.71-15.411,142.204-6.835,207.489,29.827c3.066,1.723,7.135,5.375,7.181,8.185
+								C592.503,1215.881,592.312,1246.903,592.312,1280.717z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M680.343,198.465c36.241,0,71.637,0,107.839,0c0,241.165,0,481.605,0,722.631
+								c-36.036,0-71.487,0-107.839,0C680.343,680.548,680.343,440.059,680.343,198.465z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M2520.487,1632.035c56.069,0,109.95,0,164.583,0c0,26.487,0,52.222,0,78.638
+								c-82.728,0-165.218,0-248.285,0c0-186.635,0-372.749,0-559.68c27.648,0,54.977,0,83.702,0
+								C2520.487,1311.064,2520.487,1470.729,2520.487,1632.035z" />
+							<path class="logo-svg" fill-rule="evenodd" clip-rule="evenodd" d="M699.328,1150.78c27.567,0,54.598,0,82.608,0c0,186.478,0,372.632,0,559.68
+								c-26.97,0-54.352,0-82.608,0C699.328,1524.565,699.328,1338.39,699.328,1150.78z" />
+						</g>
+					</svg>
+				</div>
+			</a>
+			<div class="menu">
+				<p><a href="concepto.html" class="header-link concept">concept</a><a href="Agenda-Tiempo-Circular.pdf" class="header-link"
+					 target="_blank">agenda</a><a href="sponsors.html" class="header-link">sponsors</a><a href="contact.html" class="header-link contact">contact</a></p>
+			</div>
+			<nav class="mobile-menu-dropdown" id="mobile-menu-dropdown">
+				<ul>
+					<li>
+						<div><a href="concepto.html" class="header-link concept">concept</a></div>
+					</li>
+					<li>
+						<div><a href="Agenda-Tiempo-Circular.pdf" class="header-link">agenda</a></div>
+					</li>
+					<li>
+						<div><a href="sponsors.html" class="header-link">sponsors</a></div>
+					</li>
+					<li>
+						<div><a href="contact.html" class="header-link contact">contact</a></div>
+					</li>
+				</ul>
+			</nav>
+			<div class="header-footer-overlay header-bottom-overlay"></div>
+		</div>
+
+		<div class="slide-panel">
+
+			<div class="backgrounds">
+				<div id="background-1" class="background" style="background-image:url(img/pla.jpg)"></div>
+				<div id="background-2" class="background" style="background-image:url(img/bilatz.jpg)"></div>
+				<div id="background-3" class="background" style="background-image:url(img/tedesco.jpg)"></div>
+				<div id="background-4" class="background" style="background-image:url(img/bellman.jpg)"></div>
+				<div id="background-5" class="background" style="background-image:url(img/fernandez.jpg)"></div>
+				<div id="background-6" class="background" style="background-image:url(img/giraud.jpg)"></div>
+				<div id="background-7" class="background" style="background-image:url(img/corallo.jpg)"></div>
+				<div id="background-8" class="background" style="background-image:url(img/rud.jpg)"></div>
+				<div id="background-9" class="background" style="background-image:url(img/amaral.jpg)"></div>
+				<div id="background-10" class="background" style="background-image:url(img/plano.jpg)"></div>
+				<div id="background-11" class="background" style="background-image:url(img/odriozola.jpg)"></div>
+				<div id="background-12" class="background" style="background-image:url(img/rawski.jpg)"></div>
+				<div id="background-13" class="background" style="background-image:url(img/viadana.jpg)"></div>
+				<div id="background-14" class="background" style="background-image:url(img/guerra.jpg)"></div>
+				<div id="background-15" class="background" style="background-image:url(img/monte.jpg)"></div>
+			</div>
+			<div class="pages">
+				<div id="page-1" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/pla.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">JARDINES
+									FRACTALES</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">EDUARDO PLA x TAXI</a> <span>Buenos
+										Aires (1952-2012)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">JARDINES
+									FRACTALES</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">EDUARDO PLA x TAXI</a><br>Buenos
+									Aires (1952-2012)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires (1952-2012). He studied graphic design, advertising, architecture,
+								audiovisual communication and
+								planning. His work is mainly digital, from video graphics, digital imaging, and 3D modeling to animation. He
+								was ahead of his time in the use of these technologies and in optical - philosophical consideration of other
+								realities.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-2" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/bilatz.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">PERDIDOS</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">JAVIER BILATZ</a> <span>Buenos Aires,
+										Argentina (1968)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">PERDIDOS</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">JAVIER BILATZ</a><br>Buenos Aires,
+									Argentina (1968)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires, Argentina (1968). He studied architecture at Buenos Aires University;
+								participated in the
+								Espacio Fundación Telefónica scholarships, he was selected in the National Chamber of Visual Arts, ‘New formats
+								and installations’ category, in the 404 Festival - Astas Romas and in 2006 in the ART+TRUST Programme. He
+								participated with technology and new media artworks in group exhibitions and international fairs.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-3" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/tedesco.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">LUNA</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">SEBASTIAN TEDESCO</a> <span>Buenos
+										Aires, (1968)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">LUNA</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">SEBASTIAN TEDESCO</a><br>Buenos
+									Aires, (1968)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires, (1968). Visual artist and industrial designer. He is interested in the
+								relationship between old
+								and new technologies, and the result of their crossing. Since 2011, he attends Diana Aisenberg’s workshop and
+								clinic; he is professor at the Art and Design Postgraduate Studies of the Tres de Febrero University and
+								responsible for image and communication at the Art and Science MUNTREF Museum.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-4" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/bellman.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">RELOJ</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">MAXIMILIANO BELLMANN</a> <span>Entre
+										Ríos, Argentina (1976)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">RELOJ</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">MAXIMILIANO BELLMANN</a><br>Entre
+									Ríos, Argentina (1976)</p>
+							</h4>
+							<p class="artist_bio">Entre Ríos, Argentina (1976). He studied Fine Arts; was part of Kuitca’s 2003-2005
+								scholarships and of Diana
+								Aisenberg´s clinic. He is a member of Oligatega art group. His production covers subjects such as the
+								relationship between form and emptiness, fractal equations, electric ray scattering on different materials, and
+								science-fiction landscapes, mainly through video and music.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-5" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/fernandez.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">RECONSTRUCCION
+									DEL FUTURO</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">MANUEL ANTONIO FERNANDEZ</a> <span>Buenos
+										Aires,
+										Argentina (1976)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">RECONSTRUCCION
+									DEL FUTURO</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">MANUEL ANTONIO FERNANDEZ</a><br>Buenos
+									Aires,
+									Argentina (1976)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires, Argentina (1976). He studied photography at SICA, participated in Diana
+								Aisenberg´s art clinics
+								and in collage workshops conducted by Hernán Paganini and Rosana Schoijett. He won several awards and took part
+								in individual and group exhibitions at the Palais de Glace, Centro Cultural Borges and Fundación Lebensohn.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-6" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/giraud.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">LEVAR</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">MARIANO GIRAUD</a> <span>Buenos
+										Aires,
+										Argentina (1977)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">LEVAR</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">MARIANO GIRAUD</a><br>Buenos Aires,
+									Argentina (1977)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires, Argentina (1977). He studied at the National School of Fine Arts P.
+								Pueyrredón, where he
+								specialized in painting. Hehas attended Diana Aisenberg’s workshops and art clinics since 2001. He is a member
+								of the art collective Oligatega since 1999, and participated in visual art workshops from the Centro Cultural
+								Rojas of the Buenos Aires University (Kuitca’s scholarship) from 2003 to 2005.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-7" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/corallo.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">VERSUS/TIEMPO
+									GRAFICO</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">GUIDO CORALLO</a> <span>Buenos Aires,
+										Argentina (1978)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">VERSUS/TIEMPO
+									GRAFICO</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">GUIDO CORALLO</a><br>Buenos Aires,
+									Argentina (1978)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires, Argentina (1978). He carried out research work at the Molecular Devices Lab
+								and on Integrative
+								Neuroscience while studying biology at the Buenos Aires University. He participated in the production workshop
+								of Media Lab’s Spain Cultural Centre. He devotes himself to image and animation programming projects, graphic
+								applications and some interactive work.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-8" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/rud.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">PIEZA</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">GABRIEL RUD</a> <span>Buenos Aires
+										(1979)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">PIEZA</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">GABRIEL RUD</a><br>Buenos Aires
+									(1979)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires (1979). He is a Specialist in Logic and Technique of the Form and an Image
+								and Sound Designer
+								from the Buenos Aires University. He is a researcher at Proyectoidis.org. First prize winner of the Salón
+								Nacional, new media and installation category.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-9" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/amaral.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">SINTETIZAR
+									EL
+									PANTANO</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">MATEO AMARAL</a> <span>Buenos Aires,
+										Argentina (1979)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">SINTETIZAR
+									EL
+									PANTANO</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">MATEO AMARAL</a><br>Buenos Aires,
+									Argentina (1979)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires, Argentina (1979). He studied illustration and animation and participated in
+								Diana Aisenberg’s
+								clinic and Kuitca’s scholarship. He is a member of the Oligatega art group, "Hipnoflautas" an electro-punk band
+								and of "Fósforo Líquido", a synthetic abstract music and video duet. He works with animation, music, video and
+								installations. He has been working on a project called "A black stone" for over 12 years.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-10" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/plano.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">HIPERNARRATIVAS</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">JAVIER PLANO</a> <span>Buenos Aires,
+										Argentina (1979)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">HIPERNARRATIVAS</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">JAVIER PLANO</a><br>Buenos Aires,
+									Argentina (1979)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires, Argentina (1979). He is a teacher, producer, artist and independent curator.
+								An audiovisual
+								technician, he's finishing a degree in Electronic Arts at the Tres de Febrero University. He is a teacher at
+								UNTREF and the UNM. He has received numerous awards at MAMba / Fundación Telefónica, Salón Nacional de Artes
+								Visuales, the UNTREF Prize to Electronic Arts, among others.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-11" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/odriozola.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">SUBASTA</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">JUANE ODRIOZOLA</a> <span>Buenos
+										Aires (1980)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">SUBASTA</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">JUANE ODRIOZOLA</a><br>Buenos
+									Aires (1980)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires (1980). He Studied Image and Sound Design at the Buenos Aires University. He
+								attended art
+								clinics with Leopoldo Estol, Fabián Burgos and Ernesto Ballesteros, and a workshop on color with Karina
+								Peisajovich. He has held art exhibitions at La Ene and Once Libre, and several collective exhibitions at Mite,
+								Benzacar, ArteBa, among others.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-12" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/rawski.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">OJO,
+									MI CIELO</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">TOMAS RAWSKI</a> <span>Buenos Aires,
+										Argentina (1980)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">OJO,
+									MI CIELO</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">TOMAS RAWSKI</a><br>Buenos Aires,
+									Argentina (1980)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires, Argentina (1980). Systems Engineer from the UAI. Rawski explores the
+								relationship between the
+								digital world and the real one, combining technology, programming and visual arts. Nowadays, he teaches
+								programming language for artists at the Universidad Nacional de Artes. He is also the founder of the directory
+								for artists Té de Artistas and co- founder of Nemeos, a social network for athletes.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-13" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/viadana.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">THE
+									OTHERNESS</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">FLORENCIA VIADANA</a> <span>Buenos
+										Aires (1986)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">THE
+									OTHERNESS</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">FLORENCIA VIADANA</a><br>Buenos Aires
+									(1986)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires (1986). LENINA is her artistic name; she works in the audiovisual design
+								field using technology
+								(digital and analog) and programming as a production and research tool. Her work mostly focuses on glitch-art,
+								combining experimental practices with her academic background in visual arts and graphic design.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-14" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/guerra.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">TARDE
+									CIRCULAR</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">IGNACIO GUERRA</a> <span>Buenos
+										Aires, Argentina (1988)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">TARDE
+									CIRCULAR</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">IGNACIO GUERRA</a><br>Buenos Aires,
+									Argentina (1988)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires, Argentina (1988). He is an artist, a programmer, a professor and a
+								researcher in training at
+								the Universidad Nacional de Tres de Febrero (UNTREF). He works with different media, but most of his production
+								focuses on the Web.</p>
+						</div>
+					</div>
+				</div>
+				<div id="page-15" class="row slide-page homepage">
+					<div class="global-content content display-table">
+						<div class="picture table-cell valign-middle"><a href="" onclick="return false;" target="_blank" class="slide-wrapper"><img
+								 src="img/monte.gif"></a></div>
+						<div class="description table-cell valign-middle">
+							<h4 class="visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">MDLI
+									PICK
+									YOUR
+									FANTASY</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">AZUL DE MONTE</a> <span>Buenos Aires,
+										Argentina
+										(1988)</span></p>
+							</h4>
+							<h4 class="not-visible"><a href="" onclick="return false;" target="_blank" class="slide-wrapper obras_name">MDLI
+									PICK
+									YOUR FANTASY</a>
+								<p><a href="" onclick="return false;" target="_blank" class="artist_name">AZUL DE MONTE</a><br>Buenos Aires,
+									Argentina (1988)</p>
+							</h4>
+							<p class="artist_bio">Buenos Aires, Argentina (1988). She studied Image and Sound at the Buenos Aires
+								University. She is a visual
+								artist and works with programs such as Autodesk Maya, After Effects, among others. She participated in Proyecto
+								A Award and in art residences in Australia and New York. Her work relates 3D animation with other media such as
+								painting and sculpture.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dots-wrapper">
+				<div class="dots-inner-wrapper table-cell valign-middle">
+					<ol>
+						<li><a href="index.html#page-1" class="page-dot-wrapper"><span class="page-dot-obra-name">JARDINES FRACTALES</span><span
+								 class="page-dot page-dot-active" id="page-dot-1"></span></a></li>
+						<li><a href="index.html#page-2" class="page-dot-wrapper"><span class="page-dot-obra-name">PERDIDOS</span><span
+								 class="page-dot " id="page-dot-2"></span></a></li>
+						<li><a href="index.html#page-3" class="page-dot-wrapper"><span class="page-dot-obra-name">LUNA</span><span class="page-dot "
+								 id="page-dot-3"></span></a></li>
+						<li><a href="index.html#page-4" class="page-dot-wrapper"><span class="page-dot-obra-name">RELOJ</span><span class="page-dot "
+								 id="page-dot-4"></span></a></li>
+						<li><a href="index.html#page-5" class="page-dot-wrapper"><span class="page-dot-obra-name">RECONSTRUCCION DEL
+									FUTURO</span><span class="page-dot " id="page-dot-5"></span></a></li>
+						<li><a href="index.html#page-6" class="page-dot-wrapper"><span class="page-dot-obra-name">LEVAR</span><span class="page-dot "
+								 id="page-dot-6"></span></a></li>
+						<li><a href="index.html#page-7" class="page-dot-wrapper"><span class="page-dot-obra-name">VERSUS/TIEMPO GRAFICO</span><span
+								 class="page-dot " id="page-dot-7"></span></a></li>
+						<li><a href="index.html#page-8" class="page-dot-wrapper"><span class="page-dot-obra-name">PIEZA</span><span class="page-dot "
+								 id="page-dot-8"></span></a></li>
+						<li><a href="index.html#page-9" class="page-dot-wrapper"><span class="page-dot-obra-name">SINTETIZAR EL PANTANO</span><span
+								 class="page-dot " id="page-dot-9"></span></a></li>
+						<li><a href="index.html#page-10" class="page-dot-wrapper"><span class="page-dot-obra-name">HIPERNARRATIVAS</span><span
+								 class="page-dot " id="page-dot-10"></span></a></li>
+						<li><a href="index.html#page-11" class="page-dot-wrapper"><span class="page-dot-obra-name">SUBASTA</span><span
+								 class="page-dot " id="page-dot-11"></span></a></li>
+						<li><a href="index.html#page-12" class="page-dot-wrapper"><span class="page-dot-obra-name">OJO, MI CIELO</span><span
+								 class="page-dot " id="page-dot-12"></span></a></li>
+						<li><a href="index.html#page-13" class="page-dot-wrapper"><span class="page-dot-obra-name">THE OTHERNESS</span><span
+								 class="page-dot " id="page-dot-13"></span></a></li>
+						<li><a href="index.html#page-14" class="page-dot-wrapper"><span class="page-dot-obra-name">TARDE CIRCULAR</span><span
+								 class="page-dot " id="page-dot-14"></span></a></li>
+						<li><a href="index.html#page-15" class="page-dot-wrapper"><span class="page-dot-obra-name">MDLI PICK YOUR FANTASY</span><span
+								 class="page-dot " id="page-dot-15"></span></a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="header-footer-overlay footer-top-overlay"></div>
+			<div class="copyright">
+				<a href="http://espaciopla.com" target="_blank" class="espaciopla" id="espacioplaTrigger">&copy; ESPACIO <span
+					 class="espacioplaUnderline">PLA</span></a>
+			</div>
+			<a href="http://taxi.design/" target="_blank" id="taxidesignTrigger">
+				<div class="powered">
+					POWERED BY <span class="taxiUnderline">TAXI</span>
+				</div>
+			</a>
+		</footer>
+	</div>
+
+	<div id='preloader'></div>
+
+	<script type="text/javascript">
+
+		var linksColorGlobal = '#000',
+			linkBorderColorAnimationInterval = 350,
+			_header = document.getElementsByClassName('header')[0],
+			linksHeaderFooter = $('.header a, .footer a'),
+			logoSVGs = $('.logo-svg'),
+			_pages = $('.slide-page'),
+			_content = $('.global-content'),
+			_mobileMenu = document.getElementById('mobile-menu') || undefined,
+			mobileMenu = $('#mobile-menu'),
+			_mobileMenuDropdown = document.getElementById('mobile-menu-dropdown'),
+			mobileMenuDropdown = $('#mobile-menu-dropdown'),
+			mobileMenuDropdownExists = mobileMenuDropdown.length > 0,
+			mobileMenuDropdownClicked = false;
+
+		var NUA = navigator.userAgent,
+			isIEX = NUA.match(/Trident/i),
+			isFirefox = NUA.match(/Firefox/i),
+			mouseWheelEvt = (/Firefox/i.test(NUA)) ? "DOMMouseScroll" : "mousewheel",
+			dB = document.body,
+			wD = window,
+			wDjQuery = $(wD),
+			htmlBody = $('body'),
+			isWindowsTouch,
+			isTouch,
+			edown = 'mousedown',
+			emove = 'mousemove',
+			eup = 'mouseup',
+			taxidesignTrigger = document.getElementById('taxidesignTrigger'),
+			espacioplaTrigger = document.getElementById('espacioplaTrigger');
+
+		(function (elm, elm2) {
+
+			isWindowsTouch = (function (elm) { return elm.PointerEvent || elm.navigator.msPointerEnabled; })(elm);
+			isTouch = (function (elm) { return 'createTouch' in elm.document && "ontouchstart" in elm; })(elm);
+
+			if (isWindowsTouch) {
+
+				if (elm.PointerEvent) {
+
+					edown = 'pointerdown';
+					emove = 'pointermove';
+					eup = 'pointerup';
+
+				} else {
+
+					edown = 'MSPointerDown';
+					emove = 'MSPointerMove';
+					eup = 'MSPointerUp';
+
+				}
+
+			} else if (isTouch) {
+
+				edown = 'touchstart';
+				emove = 'touchmove';
+				eup = 'touchend';
+
+			}
+
+		})(window, document);
+
+		wDjQuery.load(function () {
+
+			$('#preloader').fadeOut(500);
+
+		});
+
+		$(".header .menu a").mouseenter(function () {
+			$(this).stop().animate({ 'borderBottomColor': linksColorGlobal }, linkBorderColorAnimationInterval);
+		}).mouseleave(function () { $(this).stop().animate({ 'borderBottomColor': 'transparent' }, linkBorderColorAnimationInterval); });
+
+		var espacioplaUnderline = $(".espacioplaUnderline");
+		$(".espaciopla").mouseenter(function () {
+			espacioplaUnderline.stop().animate({ 'borderBottomColor': linksColorGlobal }, linkBorderColorAnimationInterval);
+		}).mouseleave(function () { espacioplaUnderline.stop().animate({ 'borderBottomColor': 'transparent' }, linkBorderColorAnimationInterval); });
+
+		var taxiUnderline = $(".taxiUnderline");
+		$(".powered").mouseenter(function () {
+			taxiUnderline.stop().animate({ 'borderBottomColor': linksColorGlobal }, linkBorderColorAnimationInterval);
+		}).mouseleave(function () { taxiUnderline.stop().animate({ 'borderBottomColor': 'transparent' }, linkBorderColorAnimationInterval); });
+
+		function E(evt) { return evt || window.event; }
+
+		function cords(ev) {
+
+			if (ev.pageX == null && ev.clientX != null) {
+
+				var html = document.documentElement;
+				var body = document.body;
+				ev.pageX = ev.clientX + (html && html.scrollLeft || body && body.scrollLeft || 0) - (html.clientLeft || 0)
+				ev.pageY = ev.clientY + (html && html.scrollTop || body && body.scrollTop || 0) - (html.clientTop || 0)
+
+			}
+
+			return { x: ev.pageX, y: ev.pageY }
+
+		}
+
+		function isUndefined(val) { return typeof val === 'undefined'; }
+
+		function PD(ev) {
+
+			ev.preventDefault ? ev.preventDefault() : ev.returnValue = false;
+
+		}
+
+		function is(elm) {
+
+			return typeof elm !== "undefined" && elm != null;
+
+		}
+
+		function getCSS(elm, prop) {
+
+			if (is(elm)) return wD.getComputedStyle(elm).getPropertyValue(prop);
+
+		}
+
+		function gCEL(elm, cls) {
+
+			return elm.getElementsByClassName(cls);
+
+		}
+
+		function indexClass(pclass, node) {
+
+			var index = 0;
+
+			for (var i = 0; i < pclass.length; i++) {
+
+				if (pclass[i] == node) return index;
+				index++;
+
+			}
+
+			return -1;
+
+		}
+
+		function getKey(ev) { return ev.which || ev.keyCode; }
+
+		function attach(elm, listener, ev, useCapture) {
+
+			elm.addEventListener(listener, ev, isUndefined(useCapture) ? false : useCapture);
+
+		}
+
+		function scroll(elm, clbk) {
+
+			if (typeof clbk == 'function') {
+
+				var scrollTimeout = null;
+
+				attach(elm, 'scroll', function () {
+
+					if (scrollTimeout !== null) { clearTimeout(scrollTimeout); }
+
+					scrollTimeout = setTimeout(function () {
+
+						clbk.call(elm);
+
+					}, 75);
+
+				});
+
+			}
+
+		}
+
+		if (!isUndefined(_mobileMenu)) {
+
+			attach(_mobileMenu, 'click', function () {
+
+				if (!mobileMenuDropdownClicked) {
+
+					mobileMenuDropdownClicked = true;
+
+					_content.css({ 'opacity': 0 });
+
+					if (wDjQuery.width() > wDjQuery.height() && wDjQuery.width() > '467') {
+
+						_header.style.width = '100%';
+
+						mobileMenuDropdown.css({ 'display': 'block' }).stop().animate({ 'width': '80%' }, 500, 'easeInOutQuad')
+
+					} else mobileMenuDropdown.css({ 'display': 'block' }).stop().animate({ 'height': (wDjQuery.height() - _mobileMenuDropdown.offsetTop) + 'px' }, 500, 'easeInOutQuad');
+
+				} else {
+
+					mobileMenuDropdownClicked = false;
+
+					wDjQuery.width() > wDjQuery.height() && wDjQuery.width() > '467' ? mobileMenuDropdown.stop().animate({ 'width': '0px' }, 500, 'easeInOutQuad', function () {
+
+						_header.style.width = 'auto';
+
+						_content.css({ 'opacity': 1 });
+
+						mobileMenuDropdown.css({ 'display': 'none' });
+
+					}) : mobileMenuDropdown.stop().animate({ 'height': '0px' }, 500, 'easeInOutQuad', function () {
+
+						_content.css({ 'opacity': 1 });
+
+						mobileMenuDropdown.css({ 'display': 'none' });
+
+					});
+
+				}
+
+			});
+
+		}
+
+		var wheelCarousel = (function (wd, doc) {
+
+			var gwd = $(window),
+				windowHeight = gwd.height(),
+				self,
+				currentIndex = 0,
+				activeIndex = 1,
+				elmOffsetTop = 0;
+
+			function wheelCarousel() { }
+
+			var WPP = wheelCarousel.prototype;
+
+			WPP.defineGlobalParent = function () { self = this; delete self.defineGlobalParent; return self; };
+
+			WPP.init = function (obj) {
+
+				if (obj.backgrounds.length > 0 && gCEL(document, 'homepage').length > 0) {
+
+					var elm = obj.elm,
+						elmjQuery = $(elm),
+						elmHeight = elm.scrollHeight - windowHeight,
+						slides = elm.getElementsByClassName('slide-page'),
+						slidesjQuery = elmjQuery.find('.slide-page'),
+						slidesLength = slidesjQuery.length - 1,
+						backgrounds = obj.backgrounds,
+						activeBackground = backgrounds[0],
+						activeBackgroundNext = activeBackground.nextElementSibling,
+						pageDotsObraNames = $('.page-dot-obra-name'),
+						pageDots = $('.page-dot'),
+						pageDotActive = $('.page-dot-active'),
+						currentIndexHeight = parseInt(getCSS(elm, 'height')),
+						isMouseWheelPresent = false,
+						currentOpacity = 0,
+						indexs = ["white", "black", "white", "white", "black", "white", "white", "white", "black", "black", "black", "black", "black", "white", "black"],
+						repeatativeIndexes = [];
+
+					$.each(indexs, function (index, item) {
+
+						if (!isUndefined(indexs[index + 1]) && indexs[index] == indexs[index + 1]) repeatativeIndexes.push(index + 1);
+
+					});
+
+					for (var i = 0; i <= slidesLength; i++) {
+
+						backgrounds[i].style.transition = backgrounds[i].style.webkitTransition = 'opacity .45s ease-in-out';
+
+					}
+
+					function runOnScroll() {
+
+						elmOffsetTop = elmjQuery.scrollTop();
+
+						defineActiveSlide(elmOffsetTop);
+
+						defineSlideOpacity(elmOffsetTop);
+
+						setSlidesOpacity();
+
+						setDotsOpacity();
+
+					}
+
+					function defineActiveSlide(scrollPosition) {
+
+						currentIndex = parseInt(scrollPosition / windowHeight);
+
+						activeBackground = backgrounds[currentIndex];
+
+						activeBackgroundNext = activeBackground[currentIndex >= slidesLength ? 'previousElementSibling' : 'nextElementSibling'];
+
+					}
+
+					function defineSlideOpacity(scrollPosition) {
+
+						currentOpacity = ((scrollPosition / elmHeight) * slidesLength) - currentIndex;
+
+					}
+
+					function setSlidesOpacity(scrollPosition) {
+
+						for (var i = 0; i <= slidesLength; i++) {
+
+							backgrounds[i].style.opacity = 0;
+
+						}
+
+						var currentOpacityDefined = Math.abs(currentOpacity);
+
+						activeBackground.style.opacity = 1 - currentOpacityDefined;
+						activeBackgroundNext.style.opacity = currentOpacityDefined;
+
+						var activeIndexElement = _pages.eq(currentIndex),
+							activeNextIndexElement = activeIndexElement[currentIndex >= slidesLength ? 'prev' : 'next']();
+
+						if ($.inArray(currentIndex + 1, repeatativeIndexes) == -1) {
+
+							var currentRGB = parseInt(((currentOpacityDefined * 100).toFixed(2) * 255) / 100);
+							var currentRGBDefined = indexs[currentIndex] == 'white' ? 255 - currentRGB : currentRGB;
+
+							currentRGBDefined = 'rgb(' + [currentRGBDefined, currentRGBDefined, currentRGBDefined].join(',') + ')';
+
+							logoSVGs.css({ 'fill': currentRGBDefined });
+							linksHeaderFooter.css({ 'color': currentRGBDefined });
+
+							activeIndexElement.find('.content .description h4, .content .description > p').css({ 'color': currentRGBDefined });
+
+							activeNextIndexElement.find('.content .description h4, .content .description > p').css({ 'color': currentRGBDefined });
+
+							linksColorGlobal = currentRGBDefined;
+
+
+						} else {
+
+							var currentRGBDefined = indexs[currentIndex];
+
+							logoSVGs.css({ 'fill': currentRGBDefined });
+							linksHeaderFooter.css({ 'color': currentRGBDefined });
+
+							activeIndexElement.find('.content .description h4, .content .description > p').css({ 'color': currentRGBDefined });
+
+							activeNextIndexElement.find('.content .description h4, .content .description > p').css({ 'color': currentRGBDefined });
+
+							linksColorGlobal = currentRGBDefined;
+
+						}
+
+						pageDotsObraNames.css({ 'color': currentRGBDefined });
+						pageDots.css({ 'backgroundColor': currentRGBDefined });
+
+						activeIndex = currentIndex + 1;
+
+					}
+
+					function setDotsOpacity() {
+
+						var pageDotActive_ = document.getElementsByClassName('page-dot-active')[0],
+							pageDot = pageDots.eq(currentIndex);
+
+						if (pageDotActive_.id != pageDot.attr('id')) {
+
+							$(pageDotActive_).removeClass('page-dot-active');
+							pageDot.addClass('page-dot-active');
+
+							pageDotActive = pageDot;
+
+						}
+
+					}
+
+					defineActiveSlide(elmjQuery.scrollTop());
+
+					attach(wd, 'keydown', function (e) {
+
+						var key = e.keyCode;
+
+						if (key == 38 || key == 40) {
+
+							if (windowHeight - htmlBody.scrollTop() > 0) {
+
+								if (key == 40) htmlBody.animate({ 'scrollTop': $('#banner-1').offset().top }, 1000, 'easeInOutExpo', function () {
+
+									activeIndex = 1;
+
+								});
+
+							} else {
+
+								activeIndex = key == 38 ? activeIndex - 1 : activeIndex + 1;
+								activeIndex = activeIndex > slidesLength + 1 ? slidesLength + 1 : (activeIndex < 0 ? 0 : activeIndex);
+
+								if (activeIndex == 0) {
+
+									if (key == 38) htmlBody.animate({ 'scrollTop': 0 }, 1000, 'easeInOutExpo');
+
+								} else {
+
+									var currentScroll = elm.scrollTop + windowHeight,
+										nextIndexHeight = windowHeight * activeIndex,
+										dif = nextIndexHeight - currentScroll;
+
+									elmjQuery.stop().animate({ scrollTop: "+=" + dif + "px" }, 500);
+
+								}
+
+							}
+
+							e.preventDefault();
+
+						}
+
+					});
+
+					attach(wd, 'resize', function () {
+
+						windowHeight = gwd.height();
+
+						elmHeight = elm.scrollHeight - windowHeight;
+
+						currentIndexHeight = parseInt(getCSS(elm, 'height'));
+						if (mobileMenuDropdownExists) mobileMenuDropdown.css({ 'height': (gwd.height() - _mobileMenuDropdown.offsetTop) + 'px' });
+
+					});
+
+					scroll(elm, function () {
+
+						runOnScroll();
+
+					});
+
+					runOnScroll();
+
+					$('.page-scroll').on(edown, function (e) {
+
+						htmlBody.animate({ 'scrollTop': $(this.getAttribute('href')).offset().top }, 1000, 'easeInOutExpo');
+
+						e.preventDefault();
+
+					});
+
+					$('.page-scroll-logo').on('click', function (e) {
+
+						if (activeIndex == 0 || activeIndex == 1) {
+
+							htmlBody.animate({ 'scrollTop': 0 }, 1000, 'easeInOutExpo');
+
+							e.preventDefault();
+
+						}
+
+					});
+
+					$('.page-dot-wrapper').on(edown, function (e) {
+
+						var pageDotHref = this.getAttribute('href'),
+							pageDot = $(this).find('.page-dot');
+
+						pageDotActive.removeClass('page-dot-active');
+						pageDot.addClass('page-dot-active');
+
+						pageDotActive = pageDot;
+
+						activeIndex = pageDotHref.replace(/[^\d]+/, '');
+
+						var currentScroll = elm.scrollTop + windowHeight,
+							nextIndexHeight = windowHeight * activeIndex,
+							dif = nextIndexHeight - currentScroll;
+
+						elmjQuery.stop().animate({ scrollTop: "+=" + dif + "px" }, 1000);
+
+						e.preventDefault();
+
+					});
+
+				}
+
+			}
+
+			return new wheelCarousel().defineGlobalParent();
+
+		})(window || this, document, undefined);
+
+		if (document.getElementsByClassName('container-obras').length > 0) wheelCarousel.init({ 'elm': gCEL(document, 'pages')[0], 'backgrounds': gCEL(document, 'background') });
+
+		//prevent pages from scrolling before bottom of the pages is reached
+
+		window.addEventListener('scroll', function () {
+			if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+				$('.pages').css("overflow", "scroll");
+			}
+			else {
+				$('.pages').css("overflow", "hidden");
+			}
+		});
+	</script>
+	<script src="js/translation.js"></script>
+</body>
+
+</html>
