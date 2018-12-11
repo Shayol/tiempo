@@ -595,6 +595,8 @@ body {
     font-weight: bold;
     line-height: 50px;
     letter-spacing: 1px;
+    /* z-index higher then dots-wrapper */
+    z-index: 76;
 }
 
 .footer a {

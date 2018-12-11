@@ -148,6 +148,7 @@ $(document).ready(function () {
         var artist_bio = document.querySelectorAll(".artist_bio");
         var contacts = document.querySelectorAll(".contact");
         var concepts = document.querySelectorAll(".concept");
+        var artists = document.querySelector(".artists");
 
         if (obras_name.length > 0) {
             obras_name.forEach((el, index) => el.innerText = es[!((index + 2) % 2) ? (index + 2) / 2 - 1 : (index + 1) / 2 - 1]["obras_name"]);
@@ -167,6 +168,10 @@ $(document).ready(function () {
 
         if (concepts.length > 0) {
             concepts.forEach(el => el.innerText = "concepto");
+        }
+
+        if (artists.length > 0) {
+            artists.forEach(el => el.innerText = "artistas");
         }
 
 
