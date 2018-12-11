@@ -7,9 +7,9 @@ $(document).ready(function () {
     if (language == 'es') {
 
         var es = [{
-            "background_link": "img/pla.jpg",
+            "background_link": "img/ep_background.jpg",
             "obra_link": "obras/pla/",
-            "img_link": "img/pla.gif",
+            "img_link": "img/eduardo_pla.jpg",
             "obras_name": "JARDINES FRACTALES",
             "artist_name": "EDUARDO PLA X TAXI",
             "artist_name_link": "espaciopla.com",
