@@ -652,13 +652,13 @@ body {
 
 .banners {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
 .banners-slidesow-wrapper ul {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
