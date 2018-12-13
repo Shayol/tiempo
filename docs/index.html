@@ -41,7 +41,7 @@
 		// const height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 		// document.getElementsByClassName('yourelement')[0].style['min-height'] = height + 'px'
 
-		let vh = Math.max(document.documentElement.clientHeight, window.innerHeight) * 0.01;
+		let vh = $(window).height() * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 		$(function () {
@@ -1298,6 +1298,9 @@
 
 		window.addEventListener('scroll', function () {
 			if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+				$('.pages').css("overflow", "scroll");
+			}
+			if ($(window).width() <= 767 && Math.round($(window).scrollTop()) == $(window).height()) {
 				$('.pages').css("overflow", "scroll");
 			}
 			else {
