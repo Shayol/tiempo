@@ -634,7 +634,7 @@ body {
 }
 
 .container-obras {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container-obras .header a,
