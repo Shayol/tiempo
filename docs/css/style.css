@@ -42,7 +42,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
+    /* min-height: calc(var(--vh, 1vh) * 100); */
     background-color: #000;
     background-image: url('../img/preloader.gif');
     background-position: center;
@@ -923,6 +923,15 @@ body {
     .content .description>p,
     .dots-wrapper {
         display: none;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .container-homepage {
+        min-height: 100vh;
+    }
+    .banners-slidesow-wrapper ul {
+        height: 100vh;
     }
 }
 
