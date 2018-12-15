@@ -1300,7 +1300,7 @@
 			if ($(window).scrollTop() + $(window).height() == $(document).height()) {
 				$('.pages').css("overflow", "scroll");
 			}
-			if ($(window).width() <= 767 && Math.round($(window).scrollTop()) == $(window).height()) {
+			else if ($(window).width() <= 767 && Math.round($(window).scrollTop()) >= $(window).height()) {
 				$('.pages').css("overflow", "scroll");
 			}
 			else {
