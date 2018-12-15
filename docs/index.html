@@ -296,7 +296,7 @@
 					</svg>
 				</div>
 			</a>
-			<a href="javascript:void(0)" class='mobile-logo page-scroll-logo'>
+			<a href="javascript:void(0)" class='mobile-logo'>
 				<div class="logo">
 					<svg version="1.1" id="mobile-menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 					 x="0px" y="0px" viewBox="0 0 3840.332 1920.166" enable-background="new 0 0 3840.332 1920.166" xml:space="preserve"
@@ -1002,7 +1002,10 @@
 
 						mobileMenuDropdown.css({ 'display': 'block' }).stop().animate({ 'width': '80%' }, 500, 'easeInOutQuad')
 
-					} else mobileMenuDropdown.css({ 'display': 'block' }).stop().animate({ 'height': (wDjQuery.height() - _mobileMenuDropdown.offsetTop) + 'px' }, 500, 'easeInOutQuad');
+					} else {
+						$('#banner-1').attr("tabindex", -1).focus();
+						mobileMenuDropdown.css({ 'display': 'block' }).stop().animate({ 'height': (wDjQuery.height() - _mobileMenuDropdown.offsetTop) + 'px' }, 500, 'easeInOutQuad');
+					}
 
 				} else {
 
@@ -1016,7 +1019,7 @@
 
 						mobileMenuDropdown.css({ 'display': 'none' });
 
-					}) : mobileMenuDropdown.stop().animate({ 'height': '0px' }, 500, 'easeInOutQuad', function () {
+					}) : mobileMenuDropdown.stop().animate({ 'height': '400px' }, 500, 'easeInOutQuad', function () {
 
 						_content.css({ 'opacity': 1 });
 
