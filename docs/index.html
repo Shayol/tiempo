@@ -41,7 +41,7 @@
 		// const height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 		// document.getElementsByClassName('yourelement')[0].style['min-height'] = height + 'px'
 
-		let vh = $(window).height() * 0.01;
+		var vh = $(window).height() * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 		$(function () {
